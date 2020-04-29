@@ -1,4 +1,6 @@
+import java.awt.*;
 import java.text.NumberFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -26,8 +28,16 @@ public class Main {
         double mortgage = principal * ( monthlyInterest * Math.pow(1+monthlyInterest,numberOfPayments))
                 / ( Math.pow(1+monthlyInterest,numberOfPayments) -1);
 
+        // one way to write is:
+//        NumberFormat numberFormat = NumberFormat.getCurrencyInstance();
+//        System.out.println("Mortgage per month: " + numberFormat.format(mortgage));
+
+        // shorter way to write is:
         String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
         System.out.println("Mortgage per month: " + mortgageFormatted);
+
+
+
 
 
 
